@@ -1,11 +1,42 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="La Pluma de Oro - Editorial">
+	<section class="hero bg-neutral-900 py-32">
+		<div class="container mx-auto text-center">
+			<h1 class="text-6xl font-bold text-yellow-500 mb-6">Bienvenidos</h1>
+			<p class="text-xl text-neutral-300 mb-12">Descubre historias que transforman vidas</p>
+			<a href="/catalogo" class="bg-yellow-500 text-neutral-900 px-8 py-3 rounded-none hover:bg-yellow-400 transition-colors font-semibold">
+				Explorar Catálogo
+			</a>
+		</div>
+	</section>
+
+	<section class="py-16 container mx-auto">
+		<h2 class="text-3xl font-bold text-center text-amber-900 mb-12">Últimos Lanzamientos</h2>
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+			<!-- Aquí irán los libros destacados -->
+		</div>
+	</section>
+
+	<section class="bg-amber-50 py-16">
+		<div class="container mx-auto px-4">
+			<h2 class="text-3xl font-bold text-center text-amber-900 mb-12">¿Por qué La Pluma de Oro?</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="text-center">
+					<h3 class="text-xl font-semibold text-amber-800 mb-4">Calidad Editorial</h3>
+					<p class="text-amber-700">Compromiso con la excelencia en cada obra publicada</p>
+				</div>
+				<div class="text-center">
+					<h3 class="text-xl font-semibold text-amber-800 mb-4">Diversidad Literaria</h3>
+					<p class="text-amber-700">Amplio catálogo que abarca múltiples géneros</p>
+				</div>
+				<div class="text-center">
+					<h3 class="text-xl font-semibold text-amber-800 mb-4">Apoyo a Autores</h3>
+					<p class="text-amber-700">Acompañamiento integral en el proceso creativo</p>
+				</div>
+			</div>
+		</div>
+	</section>
 </Layout>
