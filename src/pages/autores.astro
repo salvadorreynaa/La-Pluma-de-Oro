@@ -1,12 +1,56 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const autores = [
+    {
+        nombre: "Rosemery Morillas",
+        rol: "Escritora, poeta y mentora espiritual",
+        descripcion: "Transforma el dolor en canto a través de su poesía y guía espiritual, contribuyendo a un mundo mejor desde 2024.",
+        obras: ["El viaje secreto", "La dulce dama – La templanza", "Volver al Corazón"],
+        url: "/autores/rosemery-morillas"
+    }
+];
 ---
 
-<Layout title="Autores - La Pluma de Oro">
+<Layout title="Nuestros Autores - La Pluma de Oro">
 	<div class="container mx-auto py-12 px-4">
-		<h1 class="text-4xl font-bold text-amber-900 mb-8">Nuestros Autores</h1>
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-			<!-- Aquí irán los autores -->
+		<h1 class="text-4xl font-bold text-neutral-900 mb-12 text-center">Nuestros Autores</h1>
+		
+		<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			{autores.map(autor => (
+				<article class="bg-neutral-50 border border-neutral-200 group hover:shadow-xl transition-all">
+					<div class="p-8">
+						<h2 class="text-2xl font-bold text-neutral-900 mb-3 group-hover:text-yellow-500 transition-colors">
+							{autor.nombre}
+						</h2>
+						<p class="text-yellow-500 font-medium mb-4">{autor.rol}</p>
+						<p class="text-neutral-600 mb-6">{autor.descripcion}</p>
+						<div class="mb-6">
+							<h3 class="text-sm font-semibold text-neutral-500 mb-2">Obras destacadas:</h3>
+							<ul class="text-neutral-600 text-sm space-y-1">
+								{autor.obras.map(obra => (
+									<li>• {obra}</li>
+								))}
+							</ul>
+						</div>
+						<a href={autor.url} 
+						   class="inline-flex items-center text-neutral-900 bg-yellow-500 px-6 py-2 hover:bg-yellow-400 transition-colors">
+							Conocer más
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+							</svg>
+						</a>
+					</div>
+				</article>
+			))}
+		</div>
+
+		<div class="mt-16 text-center">
+			<p class="text-neutral-600 mb-4">¿Eres escritor y te gustaría publicar con nosotros?</p>
+			<a href="/servicios" 
+			   class="inline-block bg-neutral-900 text-white px-8 py-3 hover:bg-yellow-500 hover:text-neutral-900 transition-colors">
+				Conoce nuestros servicios editoriales
+			</a>
 		</div>
 	</div>
 </Layout>

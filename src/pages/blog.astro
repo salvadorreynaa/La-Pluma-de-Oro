@@ -1,12 +1,51 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const posts = [
+	{
+		titulo: "Las Tendencias Literarias que Dominarán 2026",
+		fecha: "15 de Agosto, 2025",
+		extracto: "El panorama literario está en constante evolución, y 2026 promete ser un año lleno de innovaciones y retornos a las raíces narrativas.",
+		url: "/blog/tendencias-literarias-2026",
+	},
+	{
+		titulo: "El Arte de la Autopromoción para Escritores",
+		fecha: "14 de Agosto, 2025",
+		extracto: "En la era digital, ser un buen escritor es solo la mitad del camino. La otra mitad es saber promocionar tu trabajo de manera efectiva y auténtica.",
+		url: "/blog/arte-autopromocion-escritores",
+	},
+	{
+		titulo: "Del Manuscrito a la Librería: El Viaje de un Libro",
+		fecha: "13 de Agosto, 2025",
+		extracto: "¿Alguna vez te has preguntado por el proceso completo que sigue un libro desde que el autor escribe la última palabra hasta que llega a las manos del lector?",
+		url: "/blog/del-manuscrito-a-la-libreria",
+	}
+];
 ---
 
 <Layout title="Blog - La Pluma de Oro">
 	<div class="container mx-auto py-12 px-4">
-		<h1 class="text-4xl font-bold text-amber-900 mb-8">Blog</h1>
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-			<!-- Aquí irán las entradas del blog -->
+		<h1 class="text-4xl font-bold text-neutral-900 mb-12 text-center">Blog</h1>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+			{posts.map(post => (
+				<article class="bg-white border border-neutral-200 hover:shadow-lg transition-shadow">
+					<div class="p-6">
+						<p class="text-sm text-neutral-500 mb-3">{post.fecha}</p>
+						<h2 class="text-xl font-semibold text-neutral-900 mb-3">
+							<a href={post.url} class="hover:text-yellow-500 transition-colors">
+								{post.titulo}
+							</a>
+						</h2>
+						<p class="text-neutral-600 mb-4 line-clamp-3">{post.extracto}</p>
+						<a href={post.url} class="text-yellow-500 hover:text-yellow-600 font-medium inline-flex items-center">
+							Leer más 
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+							</svg>
+						</a>
+					</div>
+				</article>
+			))}
 		</div>
 	</div>
 </Layout>

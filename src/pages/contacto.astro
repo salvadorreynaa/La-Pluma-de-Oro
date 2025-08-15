@@ -6,20 +6,22 @@ import Layout from '../layouts/Layout.astro';
 	<div class="container mx-auto py-12 px-4">
 		<h1 class="text-4xl font-bold text-amber-900 mb-8">Contacto</h1>
 		<div class="max-w-2xl mx-auto">
-			<form class="space-y-6">
+			<form class="space-y-6" action="https://formsubmit.co/undianuevohoy@gmail.com" method="POST">
+				<input type="hidden" name="_next" value="https://la-pluma-de-oro.onrender.com/gracias">
+				<input type="hidden" name="_subject" value="Nuevo contacto desde La Pluma de Oro">
 				<div>
-					<label for="nombre" class="block text-amber-900 font-medium mb-2">Nombre</label>
-					<input type="text" id="nombre" name="nombre" class="w-full p-2 border border-amber-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-500">
+					<label for="nombre" class="block text-neutral-800 font-medium mb-2">Nombre</label>
+					<input type="text" id="nombre" name="nombre" required class="w-full p-2 border border-neutral-300 rounded-none focus:outline-none focus:ring-2 focus:ring-yellow-500">
 				</div>
 				<div>
-					<label for="email" class="block text-amber-900 font-medium mb-2">Email</label>
-					<input type="email" id="email" name="email" class="w-full p-2 border border-amber-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-500">
+					<label for="email" class="block text-neutral-800 font-medium mb-2">Email</label>
+					<input type="email" id="email" name="email" required class="w-full p-2 border border-neutral-300 rounded-none focus:outline-none focus:ring-2 focus:ring-yellow-500">
 				</div>
 				<div>
-					<label for="mensaje" class="block text-amber-900 font-medium mb-2">Mensaje</label>
-					<textarea id="mensaje" name="mensaje" rows="6" class="w-full p-2 border border-amber-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+					<label for="mensaje" class="block text-neutral-800 font-medium mb-2">Mensaje</label>
+					<textarea id="mensaje" name="mensaje" rows="6" required class="w-full p-2 border border-neutral-300 rounded-none focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
 				</div>
-				<button type="submit" class="w-full bg-amber-800 text-white py-3 px-6 rounded-lg hover:bg-amber-700 transition-colors">
+				<button type="submit" class="w-full bg-neutral-900 text-white py-3 px-6 hover:bg-yellow-500 hover:text-neutral-900 transition-colors font-semibold">
 					Enviar Mensaje
 				</button>
 			</form>

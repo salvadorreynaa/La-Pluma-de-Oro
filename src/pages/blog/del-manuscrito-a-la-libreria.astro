@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const fecha = "13 de Agosto, 2025";
+---
+
+<Layout title="Del Manuscrito a la Librería: El Viaje de un Libro - La Pluma de Oro">
+	<article class="container mx-auto py-12 px-4 max-w-4xl">
+		<header class="mb-12">
+			<h1 class="text-4xl font-bold text-neutral-900 mb-4">Del Manuscrito a la Librería: El Viaje de un Libro</h1>
+			<div class="text-neutral-600">{fecha}</div>
+		</header>
+
+		<div class="prose prose-lg max-w-none">
+			<p class="lead text-xl text-neutral-700 mb-8">¿Alguna vez te has preguntado por el proceso completo que sigue un libro desde que el autor escribe la última palabra hasta que llega a las manos del lector?</p>
+
+			<h2 class="text-2xl font-semibold text-neutral-800 mt-8 mb-4">La Fase Editorial</h2>
+			<p>El manuscrito pasa por múltiples revisiones: evaluación inicial, corrección de estilo, corrección ortotipográfica y maquetación. Cada paso es crucial para pulir el diamante en bruto.</p>
+
+			<h2 class="text-2xl font-semibold text-neutral-800 mt-8 mb-4">Diseño y Producción</h2>
+			<p>La creación de la portada, la elección del papel, el formato y la impresión son decisiones estratégicas que afectan tanto a la experiencia lectora como al éxito comercial.</p>
+
+			<h2 class="text-2xl font-semibold text-neutral-800 mt-8 mb-4">Distribución y Marketing</h2>
+			<p>Un libro necesita llegar a su audiencia. Las estrategias de distribución, la promoción y el timing son fundamentales en el lanzamiento.</p>
+
+			<div class="mt-12 p-6 bg-neutral-50 border-l-4 border-yellow-500">
+				<p class="text-neutral-700 italic">Cada libro es un proyecto único que requiere dedicación, experiencia y trabajo en equipo para llegar a buen puerto.</p>
+			</div>
+		</div>
+	</article>
+</Layout>

@@ -1,0 +1,113 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const obras = [
+    {
+        titulo: "El viaje secreto",
+        formato: "eBook",
+        precio: "S/ 30",
+        fecha: "Mayo 2025",
+        descripcion: "ISBN Registrado - Publicado digitalmente en formato PDF"
+    },
+    {
+        titulo: "La dulce dama – La templanza",
+        formato: "eBook",
+        precio: "S/ 30",
+        estado: "Disponible"
+    },
+    {
+        titulo: "Volver al Corazón – versos que sanan el alma",
+        formato: "eBook",
+        precio: "S/ 30",
+        estado: "Disponible"
+    },
+    {
+        titulo: "La desnudez de la sombra",
+        estado: "Próximamente"
+    },
+    {
+        titulo: "Despierta de tu sueño",
+        estado: "Próximamente"
+    }
+];
+---
+
+<Layout title="Rosemary Morillas - La Pluma de Oro">
+	<div class="container mx-auto py-12 px-4">
+		<div class="max-w-6xl mx-auto">
+			<section class="bg-neutral-900 text-white p-12 mb-12">
+				<div class="grid md:grid-cols-2 gap-12 items-center">
+					<div class="space-y-6">
+						<h1 class="text-5xl font-bold text-yellow-500">Rosemary Morillas</h1>
+						<p class="text-xl text-neutral-300">Escritora, poeta y mentora espiritual</p>
+						<p class="text-neutral-400 leading-relaxed">
+							Desde sus 16 años ha cultivado la escritura, retomándola en el 2024 con un enfoque poético 
+							donde transforma el dolor en canto para contribuir a un mundo mejor.
+						</p>
+						<div class="flex gap-4">
+							<a href="https://rosemerymorillas.com/" target="_blank" rel="noopener noreferrer" 
+							   class="inline-block bg-yellow-500 text-neutral-900 px-6 py-2 font-semibold hover:bg-yellow-400 transition-colors">
+								Visitar Sitio Web
+							</a>
+						</div>
+					</div>
+					<div class="bg-neutral-800 p-8">
+						<h3 class="text-xl font-semibold text-yellow-500 mb-4">Mindfulness SLM</h3>
+						<p class="text-neutral-300 mb-4">
+							Servicio especializado enfocado en cultivar la conciencia, mente y cuerpo para vivir el presente 
+							sin filtros ni prejuicios, dentro del marco del bienestar emocional y psicológico.
+						</p>
+						<a href="/contacto" class="text-yellow-500 hover:text-yellow-400 inline-flex items-center">
+							Solicitar información
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="mb-12">
+				<h2 class="text-3xl font-bold text-neutral-900 mb-8">Obras Publicadas</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+					{obras.map(obra => (
+						<div class="border border-neutral-200 p-6 hover:shadow-lg transition-shadow">
+							<h3 class="text-xl font-semibold text-neutral-800 mb-3">{obra.titulo}</h3>
+							{obra.formato && (
+								<p class="text-neutral-600 mb-2">Formato: {obra.formato}</p>
+							)}
+							{obra.precio && (
+								<p class="text-yellow-500 font-semibold mb-2">{obra.precio}</p>
+							)}
+							{obra.fecha && (
+								<p class="text-neutral-500 text-sm mb-2">{obra.fecha}</p>
+							)}
+							{obra.descripcion && (
+								<p class="text-neutral-600 text-sm">{obra.descripcion}</p>
+							)}
+							{obra.estado === "Próximamente" ? (
+								<span class="inline-block mt-3 text-neutral-500 text-sm">{obra.estado}</span>
+							) : (
+								<a href="/contacto" class="inline-block mt-3 text-yellow-500 hover:text-yellow-600">
+									Adquirir obra →
+								</a>
+							)}
+						</div>
+					))}
+				</div>
+			</section>
+
+			<section class="bg-neutral-50 p-8 border-l-4 border-yellow-500">
+				<h2 class="text-2xl font-semibold text-neutral-900 mb-4">Asesorías Personalizadas</h2>
+				<p class="text-neutral-600 mb-6">
+					Rosemary ofrece sesiones personalizadas donde comparte su experiencia y conocimiento
+					para guiar a otros en su camino creativo y personal.
+				</p>
+				<a href="https://rosemerymorillas.com/contacto/" target="_blank" rel="noopener noreferrer" 
+				   class="inline-block bg-neutral-900 text-white px-6 py-2 hover:bg-yellow-500 hover:text-neutral-900 transition-colors">
+					Agendar una sesión
+				</a>
+			</section>
+		</div>
+	</div>
+</Layout>

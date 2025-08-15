@@ -18,27 +18,67 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="min-h-screen bg-neutral-50">
+	<body class="min-h-screen bg-neutral-50 flex flex-col">
 		<header class="bg-neutral-900 text-white p-4">
 			<nav class="container mx-auto flex justify-between items-center">
 				<div class="flex items-center">
-					<img src="/img/Logo.jpg" alt="Logo La Pluma de Oro" class="h-16 w-auto">
+					<img src="/img/Logo.jpg" alt="Logo La Pluma de Oro" class="h-20 md:h-24 w-auto transition-transform hover:scale-105">
 				</div>
 				<ul class="flex space-x-8">
-					<li><a href="/" class="hover:text-yellow-500 transition-colors">Inicio</a></li>
-					<li><a href="/catalogo" class="hover:text-yellow-500 transition-colors">Catálogo</a></li>
-					<li><a href="/autores" class="hover:text-yellow-500 transition-colors">Autores</a></li>
-					<li><a href="/blog" class="hover:text-yellow-500 transition-colors">Blog</a></li>
-					<li><a href="/contacto" class="hover:text-yellow-500 transition-colors">Contacto</a></li>
+					<li>
+						<a href="/" class="relative group py-2">
+							<span class={`transition-colors ${Astro.url.pathname === "/" ? "text-yellow-500" : "text-white group-hover:text-yellow-500"}`}>Inicio</span>
+							<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 group-hover:w-full transition-all duration-300"></span>
+							{Astro.url.pathname === "/" && 
+								<span class="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-500"></span>
+							}
+						</a>
+					</li>
+					<li>
+						<a href="/autores" class="relative group py-2">
+							<span class={`transition-colors ${Astro.url.pathname.startsWith("/autores") ? "text-yellow-500" : "text-white group-hover:text-yellow-500"}`}>Autores</span>
+							<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 group-hover:w-full transition-all duration-300"></span>
+							{Astro.url.pathname.startsWith("/autores") && 
+								<span class="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-500"></span>
+							}
+						</a>
+					</li>
+					<li>
+						<a href="/servicios" class="relative group py-2">
+							<span class={`transition-colors ${Astro.url.pathname === "/servicios" ? "text-yellow-500" : "text-white group-hover:text-yellow-500"}`}>Servicios</span>
+							<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 group-hover:w-full transition-all duration-300"></span>
+							{Astro.url.pathname === "/servicios" && 
+								<span class="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-500"></span>
+							}
+						</a>
+					</li>
+					<li>
+						<a href="/blog" class="relative group py-2">
+							<span class={`transition-colors ${Astro.url.pathname.startsWith("/blog") ? "text-yellow-500" : "text-white group-hover:text-yellow-500"}`}>Blog</span>
+							<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 group-hover:w-full transition-all duration-300"></span>
+							{Astro.url.pathname.startsWith("/blog") && 
+								<span class="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-500"></span>
+							}
+						</a>
+					</li>
+					<li>
+						<a href="/contacto" class="relative group py-2">
+							<span class={`transition-colors ${Astro.url.pathname === "/contacto" ? "text-yellow-500" : "text-white group-hover:text-yellow-500"}`}>Contacto</span>
+							<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 group-hover:w-full transition-all duration-300"></span>
+							{Astro.url.pathname === "/contacto" && 
+								<span class="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-500"></span>
+							}
+						</a>
+					</li>
 				</ul>
 			</nav>
 		</header>
-		<main>
+		<main class="flex-grow">
 			<slot />
 		</main>
-		<footer class="bg-neutral-900 text-white p-6 mt-8">
+		<footer class="bg-neutral-900 text-white p-6">
 			<div class="container mx-auto text-center">
-				<p class="text-neutral-400">&copy; {new Date().getFullYear()} La Pluma de Oro. Todos los derechos reservados.</p>
+				<p class="text-yellow-500">&copy; {new Date().getFullYear()} La Pluma de Oro. Todos los derechos reservados.</p>
 			</div>
 		</footer>
 	</body>

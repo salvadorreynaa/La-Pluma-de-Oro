@@ -7,16 +7,11 @@ import Layout from '../layouts/Layout.astro';
 		<div class="container mx-auto text-center">
 			<h1 class="text-6xl font-bold text-yellow-500 mb-6">Bienvenidos</h1>
 			<p class="text-xl text-neutral-300 mb-12">Descubre historias que transforman vidas</p>
-			<a href="/catalogo" class="bg-yellow-500 text-neutral-900 px-8 py-3 rounded-none hover:bg-yellow-400 transition-colors font-semibold">
-				Explorar Catálogo
-			</a>
-		</div>
-	</section>
-
-	<section class="py-16 container mx-auto">
-		<h2 class="text-3xl font-bold text-center text-amber-900 mb-12">Últimos Lanzamientos</h2>
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
-			<!-- Aquí irán los libros destacados -->
+			<div class="flex justify-center">
+				<a href="/servicios" class="bg-neutral-800 text-white px-8 py-3 hover:bg-yellow-500 hover:text-neutral-900 transition-colors font-semibold border border-yellow-500">
+					Publicar Libro
+				</a>
+			</div>
 		</div>
 	</section>
 
@@ -24,17 +19,57 @@ import Layout from '../layouts/Layout.astro';
 		<div class="container mx-auto px-4">
 			<h2 class="text-3xl font-bold text-center text-amber-900 mb-12">¿Por qué La Pluma de Oro?</h2>
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-				<div class="text-center">
+				<div class="text-center p-6 bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+					<div class="mb-6">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-amber-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+						</svg>
+					</div>
 					<h3 class="text-xl font-semibold text-amber-800 mb-4">Calidad Editorial</h3>
-					<p class="text-amber-700">Compromiso con la excelencia en cada obra publicada</p>
+					<p class="text-amber-700 mb-4">Compromiso inquebrantable con la excelencia en cada obra publicada. Nuestro equipo de editores expertos trabaja meticulosamente para garantizar que cada libro alcance su máximo potencial.</p>
+					<p class="text-amber-700">Ofrecemos servicios de corrección de estilo, diseño profesional y control de calidad exhaustivo en cada etapa del proceso.</p>
 				</div>
-				<div class="text-center">
+				<div class="text-center p-6 bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+					<div class="mb-6">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-amber-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+						</svg>
+					</div>
 					<h3 class="text-xl font-semibold text-amber-800 mb-4">Diversidad Literaria</h3>
-					<p class="text-amber-700">Amplio catálogo que abarca múltiples géneros</p>
+					<p class="text-amber-700 mb-4">Celebramos la riqueza de la literatura en todas sus formas. Desde narrativa contemporánea hasta poesía, ensayos y géneros especializados.</p>
+					<p class="text-amber-700">Cada autor aporta su voz única a nuestro catálogo, creando un mosaico literario que refleja la diversidad del pensamiento y la creatividad.</p>
 				</div>
-				<div class="text-center">
-					<h3 class="text-xl font-semibold text-amber-800 mb-4">Apoyo a Autores</h3>
-					<p class="text-amber-700">Acompañamiento integral en el proceso creativo</p>
+				<div class="text-center p-6 bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+					<div class="mb-6">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-amber-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-amber-800 mb-4">Apoyo Integral a Autores</h3>
+					<p class="text-amber-700 mb-4">Más que una editorial, somos compañeros en tu viaje literario. Ofrecemos mentoría personalizada, talleres de escritura y asesoramiento continuo.</p>
+					<p class="text-amber-700">Nuestro compromiso incluye estrategias de promoción, presencia en ferias del libro y un plan de marketing digital para dar visibilidad a tu obra.</p>
+				</div>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+				<div class="text-center p-6 bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+					<div class="mb-6">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-amber-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-amber-800 mb-4">Innovación Digital</h3>
+					<p class="text-amber-700 mb-4">Adoptamos las últimas tecnologías en publicación digital. Distribución multiplataforma, libros electrónicos optimizados y audiolibros de alta calidad.</p>
+					<p class="text-amber-700">Presencia garantizada en las principales plataformas de venta online y bibliotecas digitales.</p>
+				</div>
+				<div class="text-center p-6 bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+					<div class="mb-6">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-amber-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-amber-800 mb-4">Alcance Internacional</h3>
+					<p class="text-amber-700 mb-4">Tu obra merece ser leída en todo el mundo. Facilitamos la distribución internacional y las traducciones a múltiples idiomas.</p>
+					<p class="text-amber-700">Conexiones establecidas con librerías y distribuidores en América Latina, Europa y Estados Unidos.</p>
 				</div>
 			</div>
 		</div>
